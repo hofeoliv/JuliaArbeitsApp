@@ -1,0 +1,19 @@
+{
+  "name": "Übungstimer für Physiotherapie",
+  "short_name": "Übungstimer",
+  "description": "Ein einfacher Intervalltimer für physiotherapeutische Übungen.",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7f5",
+  "theme_color": "#f4f7f5",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

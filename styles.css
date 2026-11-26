@@ -1,0 +1,269 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #19332c;
+  background: #f4f7f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  padding: max(24px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  width: min(100%, 480px);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0 24px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 14px;
+  background: #dceee5;
+  color: #237554;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.eyebrow {
+  margin: 0 0 3px;
+  color: #688078;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+}
+
+h1 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 720;
+  letter-spacing: -0.035em;
+}
+
+.timer-card {
+  padding: 28px 20px 24px;
+  border: 1px solid #e7eeea;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgb(25 51 44 / 5%);
+  text-align: center;
+}
+
+.phase-label {
+  margin: 0;
+  color: #27835d;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+}
+
+.phase-label.is-rest {
+  color: #bd7624;
+}
+
+.phase-label.is-finished {
+  color: #237554;
+}
+
+.countdown {
+  margin: 10px 0 0;
+  font-size: clamp(64px, 19vw, 88px);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+  line-height: 1.08;
+}
+
+.rep-counter {
+  margin: 8px 0 20px;
+  color: #71817b;
+  font-size: 14px;
+}
+
+.progress-track {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #eaf0ec;
+}
+
+.progress-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: #32946b;
+  transition: width 120ms linear;
+}
+
+.settings {
+  margin-top: 25px;
+}
+
+.settings h2 {
+  margin: 0 0 8px 2px;
+  color: #71817b;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.setting-row {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 2px;
+  border-bottom: 1px solid #e5ebe7;
+}
+
+.setting-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.setting-name {
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.setting-hint {
+  color: #829089;
+  font-size: 12px;
+}
+
+.input-with-unit {
+  display: flex;
+  min-width: 106px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  color: #75847d;
+  font-size: 14px;
+}
+
+.input-with-unit input {
+  width: 70px;
+  min-height: 46px;
+  padding: 6px 8px;
+  border: 1px solid #dfe8e2;
+  border-radius: 12px;
+  outline: none;
+  background: #fff;
+  color: #19332c;
+  font-size: 17px;
+  font-weight: 650;
+  text-align: right;
+}
+
+.input-with-unit input:focus-visible {
+  border-color: #32946b;
+  box-shadow: 0 0 0 3px rgb(50 148 107 / 16%);
+}
+
+.input-with-unit input:disabled {
+  background: #f0f3f1;
+  color: #71817b;
+  opacity: 1;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 0.72fr;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.button {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  touch-action: manipulation;
+}
+
+.button:focus-visible {
+  outline: 3px solid #91c9ac;
+  outline-offset: 3px;
+}
+
+.button-primary {
+  background: #237554;
+  color: #fff;
+}
+
+.button-primary:active {
+  background: #1b6044;
+}
+
+.button-secondary {
+  border: 1px solid #dfe8e2;
+  background: #fff;
+  color: #40594f;
+}
+
+.connection-status {
+  min-height: 18px;
+  margin: 18px 0 0;
+  color: #829089;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-height: 700px) {
+  .header {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .timer-card {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+
+  .settings {
+    margin-top: 18px;
+  }
+
+  .setting-row {
+    min-height: 66px;
+  }
+
+  .controls {
+    margin-top: 18px;
+  }
+}
